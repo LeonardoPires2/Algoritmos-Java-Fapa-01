@@ -54,7 +54,7 @@ public class Exercicio_10 {
             default -> produto;
         };
 
-        if(0 > quantidadeProduto) {
+        if(quantidadeProduto > 0) {
             double compraFinal = produto * quantidadeProduto;
             System.out.printf(String.format("%d unidade(s) de %s a R$ %.2f a unidade = R$ %.2f ",quantidadeProduto, nomeProduto ,produto, compraFinal));
         } else {
