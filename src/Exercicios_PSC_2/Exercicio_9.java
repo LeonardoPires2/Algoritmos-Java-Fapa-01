@@ -15,7 +15,11 @@ public class Exercicio_9 {
             laranja = 0.25;
         }
 
-        double compraFinal = laranja * quantidadeProduto;
-        System.out.printf(String.format("%d unidade(s) de %s a R$ %.2f a unidade = R$ %.2f ",quantidadeProduto, nomeProduto ,laranja, compraFinal));
+        if(quantidadeProduto > 0) {
+            double compraFinal = laranja * quantidadeProduto;
+            System.out.printf(String.format("%d unidade(s) de %s a R$ %.2f a unidade = R$ %.2f ", quantidadeProduto, nomeProduto, laranja, compraFinal));
+        } else {
+            System.out.println("nenhuma comprada");
+        }
     }
 }

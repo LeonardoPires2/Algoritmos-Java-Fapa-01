@@ -32,5 +32,5 @@ public class Exercicio_8 {
             System.out.println("Triângulo escaleno");
         }
 
-        }
     }
+}

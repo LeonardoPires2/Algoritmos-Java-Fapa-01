@@ -54,7 +54,12 @@ public class Exercicio_10 {
             default -> produto;
         };
 
-        double compraFinal = produto * quantidadeProduto;
-        System.out.printf(String.format("%d unidade(s) de %s a R$ %.2f a unidade = R$ %.2f ",quantidadeProduto, nomeProduto ,produto, compraFinal));
+        if(0 > quantidadeProduto) {
+            double compraFinal = produto * quantidadeProduto;
+            System.out.printf(String.format("%d unidade(s) de %s a R$ %.2f a unidade = R$ %.2f ",quantidadeProduto, nomeProduto ,produto, compraFinal));
+        } else {
+            System.out.println("nao comprou nenhuma");
+        }
+
     }
 }
