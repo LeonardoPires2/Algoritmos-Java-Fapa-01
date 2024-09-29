@@ -10,8 +10,8 @@ public class Ex2 {
         a = ler.nextInt();
         b = ler.nextInt();
 
-        while(a>b){
-            System.out.printf("digite um numero menor que %d", a);
+        while(a>b || a <= 0 || b <= 0){
+            System.out.printf("digite um numero maior que o primeiro: %d", a);
             b = ler.nextInt();
         }
 
