@@ -1,8 +1,8 @@
-package Exercicios_PSC_1;
+package Exercicios_PSC_6;
 
 import java.util.Scanner;
 
-public class Exercicio_1 {
+public class Ex1 {
     public static void main(String[] args) {
         int num1 = 0, num2 = 0;
         Scanner ler = new Scanner(System.in);
@@ -12,8 +12,10 @@ public class Exercicio_1 {
         System.out.println("Digite um numero?");
         num2 = ler.nextInt();
 
-        int soma = num1 + num2;
-        System.out.println(String.format("o resultado da sua soma é:%d ", soma));
+        System.out.println("soma: " + soma(num1, num2));
+    }
 
+    public static int soma(int x, int y) {
+        return x + y;
     }
 }

@@ -1,22 +1,35 @@
 package Exercicios_PSC_5;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ex6 {
     public static void main(String[] args) {
+        int[][] matrizM = new int[6][6];
+        int[] vetorV = new int[36];
+        int A;
+        Scanner scanner = new Scanner(System.in);
 
-        int a[] = new int[10];
-        int b[] = new int[10];
-        int c[] = new int[10];
+        System.out.println("Digite os elementos da matriz M:");
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                matrizM[i][j] = scanner.nextInt();
+            }
+        }
 
-        vetor(a,b,c);
-        System.out.println(Arrays.toString(c));
-    }
+        System.out.print("Digite o valor de A: ");
+        A = scanner.nextInt();
 
-    public static void vetor(int a[], int b[], int c[]) {
-        for (int i = 0; i < 10; i++) {
-            a[i] = i;
-            b[i] = i;
-            c[i] = a[i] * b[i];
+        int k = 0;
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                vetorV[k] = matrizM[i][j] * A;
+                k++;
+            }
+        }
+
+        System.out.println("Vetor V:");
+        for (int i = 0; i < 36; i++) {
+            System.out.print(vetorV[i] + " ");
         }
     }
 }

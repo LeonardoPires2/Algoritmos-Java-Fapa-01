@@ -1,21 +1,36 @@
 package Exercicios_PSC_5;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ex1 {
     public static void main(String[] args) {
-        int num1 = 0, num2 = 0;
-        Scanner ler = new Scanner(System.in);
+        int linhas = 7;
+        int colunas = 9;
+        int[][] matriz = new int[linhas][colunas];
+        Random random = new Random();
 
-        System.out.println("Digite um numero?");
-        num1 = ler.nextInt();
-        System.out.println("Digite um numero?");
-        num2 = ler.nextInt();
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                matriz[i][j] = random.nextInt(100);
+            }
+        }
 
-        System.out.println("soma: " + soma(num1, num2));
-    }
+        System.out.println("Matriz gerada:");
+        for (int[] linha : matriz) {
+            for (int elemento : linha) {
+                System.out.print(elemento + "\t");
+            }
+            System.out.println();
+        }
 
-    public static int soma(int x, int y) {
-        return x + y;
+        int soma = 0;
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                soma += matriz[i][j];
+            }
+        }
+
+        System.out.println("A soma dos elementos da matriz é: " + soma);
     }
 }
